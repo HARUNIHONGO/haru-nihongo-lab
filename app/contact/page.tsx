@@ -70,75 +70,101 @@ export default function ContactPage() {
     <main className="bg-slate-50">
       {/* HERO */}
 
-      <section className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-blue-950 to-slate-900 text-gray-900">
+      <section className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-blue-950 to-slate-900 text-white">
 
-        <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10" />
+  <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10" />
 
-        <div className="absolute -top-32 left-1/2 h-96 w-96 -translate-x-1/2 rounded-full bg-sky-500/20 blur-3xl" />
+  <div className="absolute -top-32 left-1/2 h-96 w-96 -translate-x-1/2 rounded-full bg-sky-500/20 blur-3xl" />
 
-        <div className="relative mx-auto grid max-w-7xl items-center gap-14 px-6 py-24 lg:grid-cols-2">
 
-          <div>
+  <div className="relative mx-auto grid max-w-7xl items-center gap-14 px-6 py-24 lg:grid-cols-2">
 
-            <span className="inline-flex items-center rounded-full border border-sky-400/30 bg-sky-500/20 px-4 py-2 text-sm font-medium">
 
-              🇯🇵 HARU NIHONGO LAB
+    <div>
 
-            </span>
 
-            <h1 className="mt-6 text-5xl font-bold leading-tight lg:text-6xl">
+      <span className="inline-flex items-center rounded-full border border-sky-400/30 bg-sky-500/20 px-4 py-2 text-sm font-medium text-white">
 
-              일본어는
-              <br />
+        🇯🇵 HARU NIHONGO LAB
 
-              <span className="text-sky-400">
+      </span>
 
-                즐겁게 배워야
 
-              </span>
 
-              <br />
+      <h1 className="mt-6 text-5xl font-bold leading-tight text-white lg:text-6xl">
 
-              오래 갑니다.
+        일본어는
+        <br />
 
-            </h1>
+        <span className="text-sky-400">
 
-            <p className="mt-8 max-w-xl text-lg leading-8 text-slate-300">
+          즐겁게 배워야
 
-              안녕하세요.
-              <br />
-              HARU NIHONGO LAB의
-              <span className="font-semibold text-gray-900">
-                {" "}튜터 하루
-              </span>
-              입니다.
+        </span>
 
-              <br /><br />
+        <br />
 
-              여행 일본어부터 JLPT,
-              실전 회화까지
+        오래 갑니다.
 
-              학생 한 명 한 명에게 맞춘
-              1:1 일본어 수업을 진행하고 있습니다.
+      </h1>
 
-            </p>
 
-            <div className="mt-10 flex flex-wrap gap-4">
 
-              <Link
-                href="#contact"
-                className="flex items-center gap-2 rounded-xl bg-sky-500 px-7 py-4 font-semibold transition hover:bg-sky-400"
-              >
-                무료 상담 신청
-                <ArrowRight size={20} />
-              </Link>
+      <p className="mt-8 max-w-xl text-lg leading-8 text-slate-300">
 
-              <Link
-                href="#faq"
-                className="rounded-xl border border-white/20 px-7 py-4 transition hover:bg-white/10"
-              >
-                FAQ 보기
-              </Link>
+        안녕하세요.
+        <br />
+
+        HARU NIHONGO LAB의
+
+        <span className="font-semibold text-white">
+          {" "}튜터 하루
+        </span>
+
+        입니다.
+
+
+        <br />
+        <br />
+
+
+        여행 일본어부터 JLPT,
+        실전 회화까지
+
+        <br />
+
+        학생 한 명 한 명에게 맞춘
+        1:1 일본어 수업을 진행하고 있습니다.
+
+
+      </p>
+
+
+
+      <div className="mt-10 flex flex-wrap gap-4">
+
+
+        <Link
+          href="#contact"
+          className="flex items-center gap-2 rounded-xl bg-sky-500 px-7 py-4 font-semibold text-slate-900 transition hover:bg-sky-400"
+        >
+
+          무료 상담 신청
+
+          <ArrowRight size={20} />
+
+        </Link>
+
+
+
+        <Link
+          href="#faq"
+          className="rounded-xl border border-white/20 px-7 py-4 text-white transition hover:bg-white/10"
+        >
+
+          FAQ 보기
+
+        </Link>
 
             </div>
 
