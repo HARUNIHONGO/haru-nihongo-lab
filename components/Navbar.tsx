@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { Menu, X } from "lucide-react";
 
 const menu = [
   { name: "About", href: "#about" },
@@ -16,7 +17,7 @@ export default function Navbar() {
   return (
     <header className="fixed inset-x-0 top-0 z-50">
       <div className="mx-auto mt-5 flex w-[92%] max-w-7xl items-center justify-between rounded-full border border-white/20 bg-white/10 px-5 py-4 backdrop-blur-xl md:px-8">
-
+        {/* 로고 */}
         <Link
           href="/"
           className="text-sm font-semibold tracking-[0.25em] text-white transition hover:opacity-80 md:text-lg"
@@ -40,22 +41,23 @@ export default function Navbar() {
         {/* 모바일 햄버거 */}
         <button
           onClick={() => setOpen(!open)}
-          className="text-[#1E2433] hover:text-[#4B6584] transition"
+          className="md:hidden text-[#1E2433] transition hover:text-[#4B6584]"
+          aria-label="메뉴 열기"
         >
-          ☰
+          {open ? <X size={28} /> : <Menu size={28} />}
         </button>
       </div>
 
       {/* 모바일 메뉴 */}
       {open && (
-        <div className="mx-auto mt-3 w-[92%] rounded-3xl border border-white/20 bg-black/70 p-6 backdrop-blur-xl md:hidden">
+        <div className="mx-auto mt-3 w-[92%] rounded-3xl border border-white/30 bg-white/95 p-6 shadow-xl backdrop-blur-xl md:hidden">
           <nav className="flex flex-col gap-5">
             {menu.map((item) => (
               <a
                 key={item.name}
                 href={item.href}
                 onClick={() => setOpen(false)}
-                className="text-lg text-white transition hover:text-[#D4AF37]"
+                className="text-lg font-medium text-[#1E2433] transition hover:text-[#4B6584]"
               >
                 {item.name}
               </a>
