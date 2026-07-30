@@ -930,192 +930,240 @@ export default function ContactPage() {
 
       </section>      {/* CONTACT */}
 
-      <section
-        id="contact"
-        className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-blue-950 to-slate-900 py-24 text-text-gray-900 md:text-gray-900"
+ <section
+  id="contact"
+  className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-blue-950 to-slate-900 py-24 text-white"
+>
+
+  <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10" />
+
+  <div className="absolute left-1/2 top-0 h-96 w-96 -translate-x-1/2 rounded-full bg-sky-500/20 blur-3xl" />
+
+
+  <div className="relative mx-auto max-w-5xl px-6 text-center">
+
+
+    <span className="inline-flex rounded-full border border-sky-400/30 bg-sky-500/20 px-5 py-2 text-sm font-semibold text-white">
+
+      🇯🇵 HARU NIHONGO LAB
+
+    </span>
+
+
+
+    <h2 className="mt-8 text-5xl font-bold leading-tight text-white">
+
+      일본어,
+      <br />
+
+      오늘부터 시작해보세요.
+
+    </h2>
+
+
+
+    <p className="mx-auto mt-8 max-w-3xl text-lg leading-9 text-slate-300">
+
+      일본어는 혼자 오래 고민하는 것보다
+      올바른 방향으로 시작하는 것이 훨씬 중요합니다.
+
+      <br />
+      <br />
+
+      무료 상담을 통해
+      현재 실력과 목표에 맞는
+      가장 효율적인 커리큘럼을 안내해드립니다.
+
+    </p>
+
+
+
+    <div className="mt-16 grid gap-6 md:grid-cols-3">
+
+
+      {/* KAKAO */}
+
+      <a
+        href="https://open.kakao.com/"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="group rounded-3xl bg-[#FEE500] px-8 py-6 text-lg font-bold text-black transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl"
       >
 
-        <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10" />
-
-        <div className="absolute left-1/2 top-0 h-96 w-96 -translate-x-1/2 rounded-full bg-sky-500/20 blur-3xl" />
-
-        <div className="relative mx-auto max-w-5xl px-6 text-center">
-
-          <span className="inline-flex rounded-full border border-sky-400/30 bg-sky-500/20 px-5 py-2 text-sm font-semibold">
-
-            🇯🇵 HARU NIHONGO LAB
-
-          </span>
-
-          <h2 className="mt-8 text-5xl font-bold leading-tight">
-
-            일본어,
-            <br />
-
-            오늘부터 시작해보세요.
-
-          </h2>
-
-          <p className="mx-auto mt-8 max-w-3xl text-lg leading-9 text-slate-300">
-
-            일본어는 혼자 오래 고민하는 것보다
-            올바른 방향으로 시작하는 것이 훨씬 중요합니다.
-
-            <br />
-            무료 상담을 통해
-            현재 실력과 목표에 맞는
-            가장 효율적인 커리큘럼을 안내해드립니다.
-
-          </p>
-
-          <div className="mt-16 grid gap-6 md:grid-cols-3">
-
-            <a
-              href="https://open.kakao.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group rounded-3xl bg-[#FEE500] px-8 py-6 text-lg font-bold text-black transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl"
-            >
-
-              <div className="text-3xl">
-
-                💬
-
-              </div>
-
-              <div className="mt-4">
-
-                카카오톡 상담
-
-              </div>
-
-            </a>
-
-            <a
-              href="https://instagram.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group rounded-3xl bg-gradient-to-r from-pink-500 via-red-500 to-orange-400 px-8 py-6 text-lg font-bold transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl"
-            >
-
-              <div className="text-3xl">
-
-                📷
-
-              </div>
-
-              <div className="mt-4">
-
-                Instagram
-
-              </div>
-
-            </a>
-
-            <a
-              href="mailto:example@gmail.com"
-              className="group rounded-3xl bg-sky-500 px-8 py-6 text-lg font-bold transition-all duration-300 hover:-translate-y-2 hover:bg-sky-400 hover:shadow-2xl"
-            >
-
-              <div className="text-3xl">
-
-                📧
-
-              </div>
-
-              <div className="mt-4">
-
-                Email
-
-              </div>
-
-            </a>
-
-          </div>
-
-          <div className="mt-20 rounded-[32px] border border-white/10 bg-white/5 p-10 backdrop-blur">
-
-            <h3 className="text-3xl font-bold">
-
-              HARU NIHONGO LAB
-
-            </h3>
-
-            <p className="mt-6 text-lg leading-8 text-slate-300">
-
-              일본어를 배우는 가장 즐거운 방법.
-
-              <br />
-
-              학생의 목표를 함께 이루는
-              1:1 일본어 전문 클래스입니다.
-
-            </p>
-
-            <div className="mt-10 flex flex-wrap justify-center gap-4">
-
-              <Link
-                href="/"
-                className="rounded-xl border border-white/20 px-6 py-3 transition hover:bg-white/10"
-              >
-                홈으로
-              </Link>
-
-              <Link
-                href="#faq"
-                className="rounded-xl border border-white/20 px-6 py-3 transition hover:bg-white/10"
-              >
-                FAQ
-              </Link>
-
-              <Link
-                href="#contact"
-                className="rounded-xl bg-sky-500 px-6 py-3 font-semibold transition hover:bg-sky-400"
-              >
-                무료 상담
-              </Link>
-
-            </div>
-
-          </div>
-
+        <div className="text-3xl">
+          💬
         </div>
 
-      </section>
-
-      {/* FOOTER */}
-
-      <footer className="border-t border-slate-200 bg-white">
-
-        <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-6 px-6 py-10 text-center md:flex-row md:text-left">
-
-          <div>
-
-            <h3 className="text-xl font-bold text-slate-900">
-
-              HARU NIHONGO LAB
-
-            </h3>
-
-            <p className="mt-2 text-slate-500">
-
-              Learn Japanese Naturally.
-
-            </p>
-
-          </div>
-
-          <div className="text-sm leading-7 text-slate-500">
-
-            © {new Date().getFullYear()} HARU NIHONGO LAB.
-            <br />
-            All Rights Reserved.
-
-          </div>
-
+        <div className="mt-4">
+          카카오톡 상담
         </div>
 
-      </footer>
+      </a>
+
+
+
+
+      {/* INSTAGRAM */}
+
+      <a
+        href="https://instagram.com/"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="group rounded-3xl bg-gradient-to-r from-pink-500 via-red-500 to-orange-400 px-8 py-6 text-lg font-bold text-white transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl"
+      >
+
+        <div className="text-3xl">
+          📷
+        </div>
+
+
+        <div className="mt-4">
+          Instagram
+        </div>
+
+
+      </a>
+
+
+
+
+
+      {/* EMAIL */}
+
+      <a
+        href="mailto:example@gmail.com"
+        className="group rounded-3xl bg-sky-500 px-8 py-6 text-lg font-bold text-white transition-all duration-300 hover:-translate-y-2 hover:bg-sky-400 hover:shadow-2xl"
+      >
+
+        <div className="text-3xl">
+          📧
+        </div>
+
+
+        <div className="mt-4">
+          Email
+        </div>
+
+
+      </a>
+
+
+    </div>
+
+
+
+
+
+    <div className="mt-20 rounded-[32px] border border-white/10 bg-white/5 p-10 backdrop-blur">
+
+
+      <h3 className="text-3xl font-bold text-white">
+
+        HARU NIHONGO LAB
+
+      </h3>
+
+
+
+      <p className="mt-6 text-lg leading-8 text-slate-300">
+
+        일본어를 배우는 가장 즐거운 방법.
+
+        <br />
+
+        학생의 목표를 함께 이루는
+        1:1 일본어 전문 클래스입니다.
+
+      </p>
+
+
+
+
+      <div className="mt-10 flex flex-wrap justify-center gap-4">
+
+
+        <Link
+          href="/"
+          className="rounded-xl border border-white/20 px-6 py-3 text-white transition hover:bg-white/10"
+        >
+          홈으로
+        </Link>
+
+
+
+        <Link
+          href="#faq"
+          className="rounded-xl border border-white/20 px-6 py-3 text-white transition hover:bg-white/10"
+        >
+          FAQ
+        </Link>
+
+
+
+        <Link
+          href="#contact"
+          className="rounded-xl bg-sky-500 px-6 py-3 font-semibold text-white transition hover:bg-sky-400"
+        >
+          무료 상담
+        </Link>
+
+
+      </div>
+
+
+    </div>
+
+
+  </div>
+
+
+</section>
+
+
+
+
+{/* FOOTER */}
+
+<footer className="border-t border-slate-200 bg-white">
+
+
+  <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-6 px-6 py-10 text-center md:flex-row md:text-left">
+
+
+    <div>
+
+
+      <h3 className="text-xl font-bold text-slate-900">
+
+        HARU NIHONGO LAB
+
+      </h3>
+
+
+      <p className="mt-2 text-slate-500">
+
+        Learn Japanese Naturally.
+
+      </p>
+
+
+    </div>
+
+
+
+    <div className="text-sm leading-7 text-slate-500">
+
+      © {new Date().getFullYear()} HARU NIHONGO LAB.
+      <br />
+      All Rights Reserved.
+
+    </div>
+
+
+  </div>
+
+
+</footer>
 
     </main>
 
