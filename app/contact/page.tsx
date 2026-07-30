@@ -291,7 +291,65 @@ export default function ContactPage() {
                 폭넓게 함께합니다.
 
               </p>
+{/* TUTOR CAREER */}
 
+<div className="mt-10 rounded-3xl bg-white p-8 shadow-lg">
+
+  <div className="flex items-center gap-3">
+
+    <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-sky-100">
+      🎓
+    </div>
+
+    <div>
+      <p className="text-sm font-semibold tracking-widest text-sky-600">
+        TUTOR CAREER
+      </p>
+
+      <h3 className="mt-1 text-xl font-bold text-slate-900">
+        튜터 하루의 이력
+      </h3>
+    </div>
+
+  </div>
+
+
+  <div className="mt-6 space-y-4 text-slate-700">
+
+    <div className="flex items-start gap-3">
+      <CheckCircle className="mt-1 h-5 w-5 text-green-500" />
+      <p>
+        AmazingTalker 일본인 대상 한국어 강사
+      </p>
+    </div>
+
+
+    <div className="flex items-start gap-3">
+      <CheckCircle className="mt-1 h-5 w-5 text-green-500" />
+      <p>
+        사이버한국외국어대학교 일본어학부 졸업
+      </p>
+    </div>
+
+
+    <div className="flex items-start gap-3">
+      <CheckCircle className="mt-1 h-5 w-5 text-green-500" />
+      <p>
+        1:1 맞춤형 일본어 수업 운영
+      </p>
+    </div>
+
+
+    <div className="flex items-start gap-3">
+      <CheckCircle className="mt-1 h-5 w-5 text-green-500" />
+      <p>
+        JLPT · 회화 · 여행 일본어 전문
+      </p>
+    </div>
+
+  </div>
+
+</div>
               <div className="mt-10 space-y-5">
 
                 <div className="flex items-center gap-3">
