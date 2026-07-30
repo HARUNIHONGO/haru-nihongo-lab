@@ -70,7 +70,7 @@ export default function ContactPage() {
     <main className="bg-slate-50">
       {/* HERO */}
 
-      <section className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-blue-950 to-slate-900 text-white">
+      <section className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-blue-950 to-slate-900 text-gray-900">
 
         <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10" />
 
@@ -108,7 +108,7 @@ export default function ContactPage() {
               안녕하세요.
               <br />
               HARU NIHONGO LAB의
-              <span className="font-semibold text-white">
+              <span className="font-semibold text-gray-900">
                 {" "}튜터 하루
               </span>
               입니다.
@@ -260,7 +260,7 @@ export default function ContactPage() {
 
               </span>
 
-              <h2 className="mt-3 text-4xl font-bold">
+              <h2 className="mt-3 text-4xl font-bold text-gray-900">
 
                 안녕하세요,
                 <br />
@@ -509,7 +509,7 @@ export default function ContactPage() {
 
                 <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-sky-100 transition group-hover:bg-sky-500">
 
-                  <Star className="h-7 w-7 text-sky-600 group-hover:text-white" />
+                  <Star className="h-7 w-7 text-sky-600 group-hover:text-gray-900 md:text-gray-900" />
 
                 </div>
 
@@ -594,7 +594,7 @@ export default function ContactPage() {
                 className="flex flex-col gap-6 rounded-3xl bg-white p-8 shadow-lg md:flex-row md:items-center"
               >
 
-                <div className="flex h-20 w-20 items-center justify-center rounded-full bg-sky-500 text-2xl font-bold text-white">
+                <div className="flex h-20 w-20 items-center justify-center rounded-full bg-sky-500 text-2xl font-bold text-gray-900 md:text-gray-900">
 
                   {item.step}
 
@@ -906,7 +906,7 @@ export default function ContactPage() {
 
       <section
         id="contact"
-        className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-blue-950 to-slate-900 py-24 text-white"
+        className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-blue-950 to-slate-900 py-24 text-text-gray-900 md:text-gray-900"
       >
 
         <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10" />
