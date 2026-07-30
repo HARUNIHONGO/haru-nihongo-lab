@@ -1,70 +1,199 @@
-import Link from "next/link";
+"use client";
 
-export default function Page1() {
+import { useState } from "react";
+import { useRouter } from "next/navigation";
+
+import { beginnerQuestions } from "@/data/beginner";
+import QuestionCard from "@/components/QuestionCard";
+import ProgressBar from "@/components/ProgressBar";
+
+export default function BeginnerPage() {
+  const router = useRouter();
+
+  // 현재 문제 번호
+  const [currentQuestion, setCurrentQuestion] = useState(0);
+
+  // 사용자가 선택한 답
+  const [selectedAnswer, setSelectedAnswer] = useState<number | null>(null);
+
+  // 모든 답 저장
+  const [answers, setAnswers] = useState<number[]>(
+    Array(beginnerQuestions.length).fill(-1)
+  );
+
+  // 현재 문제
+  const question = beginnerQuestions[currentQuestion];
+
+
+  // 답 선택
+  const handleSelect = (index: number) => {
+    setSelectedAnswer(index);
+
+    const newAnswers = [...answers];
+    newAnswers[currentQuestion] = index;
+    setAnswers(newAnswers);
+  };
+
+
+  // 이전 문제
+  const handlePrev = () => {
+    if (currentQuestion === 0) return;
+
+    const prev = currentQuestion - 1;
+
+    setCurrentQuestion(prev);
+
+    if (answers[prev] === -1) {
+      setSelectedAnswer(null);
+    } else {
+      setSelectedAnswer(answers[prev]);
+    }
+  };
+
+
+  // 다음 문제
+  const handleNext = () => {
+
+    if (selectedAnswer === null) {
+      alert("답을 선택해주세요.");
+      return;
+    }
+
+
+    // 마지막 문제
+    if (currentQuestion === beginnerQuestions.length - 1) {
+
+      let score = 0;
+
+
+      beginnerQuestions.forEach((question, index) => {
+
+        if (answers[index] === question.answer) {
+          score++;
+        }
+
+      });
+
+
+      const result = {
+        score,
+        total: beginnerQuestions.length,
+        answers,
+      };
+
+
+      // 결과 저장
+      localStorage.setItem(
+        "beginnerResult",
+        JSON.stringify(result)
+      );
+
+
+      // 이전 결과 삭제
+      localStorage.removeItem(
+        "intermediateResult"
+      );
+
+
+      // 18점 이상이면 중급 테스트 이동
+      if (score >= 18) {
+
+        router.push(
+          "/level-test/intermediate"
+        );
+
+      } else {
+
+        router.push(
+          "/level-test/result"
+        );
+
+      }
+
+
+      return;
+    }
+
+
+
+    const next = currentQuestion + 1;
+
+
+    setCurrentQuestion(next);
+
+
+    if (answers[next] === -1) {
+
+      setSelectedAnswer(null);
+
+    } else {
+
+      setSelectedAnswer(
+        answers[next]
+      );
+
+    }
+
+  };
+
+
+
   return (
-    <main className="min-h-screen bg-gradient-to-br from-[#0F172A] via-[#14213D] to-[#1D4ED8] text-white">
-      <div className="mx-auto flex min-h-screen max-w-7xl items-center px-6">
-        <div className="max-w-3xl">
+    <main className="min-h-screen bg-gray-50 py-16">
 
-          <span className="rounded-full border border-white/20 bg-white/10 px-4 py-2 text-sm backdrop-blur">
-            HARU NIHONGO LAB
-          </span>
+      <div className="mx-auto max-w-3xl px-6">
 
-          <h1 className="mt-8 text-5xl font-bold leading-tight md:text-6xl">
-            당신의 일본어 실력을
-            <br />
-            지금 바로 확인해보세요.
-          </h1>
 
-          <p className="mt-8 text-lg leading-8 text-white/80">
-            HARU NIHONGO LAB에서 준비한 무료 일본어 레벨 테스트입니다.
-            <br />
-            초급부터 고급까지 단계별 테스트를 통해
-            <br />
-            현재 자신의 일본어 실력을 객관적으로 확인할 수 있습니다.
-          </p>
+        <ProgressBar
+          current={currentQuestion + 1}
+          total={beginnerQuestions.length}
+        />
 
-          <div className="mt-10 grid gap-5 md:grid-cols-3">
-            <div className="rounded-2xl border border-white/10 bg-white/10 p-6 backdrop-blur">
-              <h3 className="text-xl font-semibold">20문항</h3>
-              <p className="mt-2 text-sm text-white/70">
-                단계별 20문항으로 구성
-              </p>
-            </div>
 
-            <div className="rounded-2xl border border-white/10 bg-white/10 p-6 backdrop-blur">
-              <h3 className="text-xl font-semibold">약 15분</h3>
-              <p className="mt-2 text-sm text-white/70">
-                누구나 부담 없이 응시
-              </p>
-            </div>
+        <div className="mt-8">
 
-            <div className="rounded-2xl border border-white/10 bg-white/10 p-6 backdrop-blur">
-              <h3 className="text-xl font-semibold">무료</h3>
-              <p className="mt-2 text-sm text-white/70">
-                회원가입 없이 이용 가능
-              </p>
-            </div>
-          </div>
-
-          <div className="mt-14 flex flex-wrap gap-4">
-            <Link
-              href="/level-test/beginner"
-              className="rounded-xl bg-white px-8 py-4 text-lg font-semibold text-[#14213D] transition hover:scale-105"
-            >
-              테스트 시작하기 →
-            </Link>
-
-            <Link
-              href="/"
-              className="rounded-xl border border-white/20 px-8 py-4 text-lg transition hover:bg-white/10"
-            >
-              홈으로
-            </Link>
-          </div>
+          <QuestionCard
+            question={question}
+            current={currentQuestion + 1}
+            total={beginnerQuestions.length}
+            selected={selectedAnswer}
+            onSelect={handleSelect}
+          />
 
         </div>
+
+
+
+        <div className="mt-10 flex justify-between">
+
+
+          <button
+            onClick={handlePrev}
+            disabled={currentQuestion === 0}
+            className="rounded-xl border border-gray-300 px-6 py-3 transition hover:bg-gray-100 disabled:cursor-not-allowed disabled:opacity-40"
+          >
+            이전
+          </button>
+
+
+
+          <button
+            onClick={handleNext}
+            className="rounded-xl bg-[#14213D] px-8 py-3 font-medium text-white transition hover:opacity-90"
+          >
+
+            {currentQuestion === beginnerQuestions.length - 1
+              ? "결과 보기"
+              : "다음"}
+
+          </button>
+
+
+        </div>
+
+
       </div>
+
     </main>
   );
 }
