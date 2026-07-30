@@ -40,7 +40,7 @@ export default function Navbar() {
         {/* 모바일 햄버거 */}
         <button
           onClick={() => setOpen(!open)}
-          className="text-2xl text-white md:hidden"
+          className="text-[#1E2433] hover:text-[#4B6584] transition"
         >
           ☰
         </button>
