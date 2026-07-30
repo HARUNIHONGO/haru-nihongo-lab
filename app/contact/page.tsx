@@ -151,7 +151,7 @@ export default function ContactPage() {
               <div className="absolute -inset-3 rounded-3xl bg-sky-500 opacity-20 blur-3xl" />
 
               <Image
-                src="/tutor.jpg"
+                src="/haru.jpg"
                 alt="튜터 하루"
                 width={430}
                 height={560}
@@ -243,7 +243,7 @@ export default function ContactPage() {
               <div className="absolute -inset-4 rounded-3xl bg-sky-500/10 blur-2xl" />
 
               <Image
-                src="/tutor.jpg"
+                src="/haru.jpg"
                 alt="튜터 하루"
                 width={520}
                 height={650}
