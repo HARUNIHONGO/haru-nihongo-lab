@@ -35,8 +35,8 @@ export default function StepSection() {
 
   return (
     <section
-      id="step"
-      className="bg-white py-32 px-6"
+      id="curriculum"
+      className="bg-white px-6 py-32"
     >
       <div className="mx-auto max-w-7xl">
 
@@ -50,6 +50,7 @@ export default function StepSection() {
           5단계 커리큘럼
         </h2>
 
+
         <div className="grid gap-8 md:grid-cols-2 xl:grid-cols-5">
 
           {steps.map((step) => (
@@ -57,17 +58,22 @@ export default function StepSection() {
               key={step.number}
               className="group rounded-3xl border border-gray-200 bg-[#FAFAF8] p-8 transition-all duration-300 hover:-translate-y-3 hover:shadow-2xl hover:border-[#1E2B68]"
             >
+
               <p className="text-xs tracking-[0.3em] text-gray-500">
                 {step.number}
               </p>
+
 
               <h3 className="mt-6 text-2xl font-light leading-[1.4] text-[#1E2433]">
                 {step.title}
               </h3>
 
+
               <p className="mt-5 leading-8 text-gray-600">
                 {step.description}
               </p>
+
+
             </div>
           ))}
 
