@@ -10,7 +10,6 @@ export default function Contact() {
 
         <div className="rounded-[40px] border border-white/10 bg-white/5 px-10 py-16 backdrop-blur-sm">
 
-
           <div className="text-center">
 
             <p className="text-sm tracking-[0.35em] text-blue-200">
@@ -32,7 +31,6 @@ export default function Contact() {
             </p>
 
           </div>
-
 
 
           <div className="mt-12 grid gap-5 md:grid-cols-2">
@@ -72,8 +70,22 @@ export default function Contact() {
           <div className="mt-12 flex justify-center">
 
             <Link
-              href="#"
-              className="rounded-full bg-white px-10 py-4 font-semibold text-[#14213D] transition hover:-translate-y-1 hover:scale-105 hover:shadow-xl"
+              href="/contact"
+              className="
+                relative
+                z-10
+                inline-flex
+                rounded-full
+                bg-white
+                px-10
+                py-4
+                font-semibold
+                text-[#14213D]
+                transition
+                hover:-translate-y-1
+                hover:scale-105
+                hover:shadow-xl
+              "
             >
               수업 문의하기 →
             </Link>
