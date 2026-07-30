@@ -978,81 +978,110 @@ export default function ContactPage() {
 
 
 
-    <div className="mt-16 grid gap-6 md:grid-cols-3">
+   <div className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
 
 
-      {/* KAKAO */}
+  {/* KAKAO */}
 
-      <a
-        href="https://open.kakao.com/"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="group rounded-3xl bg-[#FEE500] px-8 py-6 text-lg font-bold text-black transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl"
-      >
+  <a
+    href="https://open.kakao.com/o/sQlmUrGi"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="group rounded-3xl bg-[#FEE500] px-8 py-6 text-lg font-bold text-black transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl"
+  >
 
-        <div className="text-3xl">
-          💬
-        </div>
-
-        <div className="mt-4">
-          카카오톡 상담
-        </div>
-
-      </a>
-
-
-
-
-      {/* INSTAGRAM */}
-
-      <a
-        href="https://instagram.com/"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="group rounded-3xl bg-gradient-to-r from-pink-500 via-red-500 to-orange-400 px-8 py-6 text-lg font-bold text-white transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl"
-      >
-
-        <div className="text-3xl">
-          📷
-        </div>
-
-
-        <div className="mt-4">
-          Instagram
-        </div>
-
-
-      </a>
-
-
-
-
-
-      {/* EMAIL */}
-
-      <a
-        href="mailto:example@gmail.com"
-        className="group rounded-3xl bg-sky-500 px-8 py-6 text-lg font-bold text-white transition-all duration-300 hover:-translate-y-2 hover:bg-sky-400 hover:shadow-2xl"
-      >
-
-        <div className="text-3xl">
-          📧
-        </div>
-
-
-        <div className="mt-4">
-          Email
-        </div>
-
-
-      </a>
-
-
+    <div className="text-3xl">
+      💬
     </div>
 
+    <div className="mt-4">
+      카카오톡 상담
+    </div>
+
+    <p className="mt-2 text-sm font-medium">
+      빠른 상담 문의
+    </p>
+
+  </a>
 
 
 
+
+  {/* INSTAGRAM */}
+
+  <a
+    href="https://instagram.com/HARUNIHONGOLAB"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="group rounded-3xl bg-gradient-to-r from-pink-500 via-red-500 to-orange-400 px-8 py-6 text-lg font-bold text-white transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl"
+  >
+
+    <div className="text-3xl">
+      📷
+    </div>
+
+    <div className="mt-4">
+      Instagram
+    </div>
+
+    <p className="mt-2 text-sm font-medium">
+      @HARUNIHONGOLAB
+    </p>
+
+  </a>
+
+
+
+
+
+  {/* EMAIL */}
+
+  <a
+    href="mailto:iamdw12@daum.net"
+    className="group rounded-3xl bg-sky-500 px-8 py-6 text-lg font-bold text-white transition-all duration-300 hover:-translate-y-2 hover:bg-sky-400 hover:shadow-2xl"
+  >
+
+    <div className="text-3xl">
+      📧
+    </div>
+
+    <div className="mt-4">
+      Email
+    </div>
+
+    <p className="mt-2 text-sm font-medium">
+      문의 보내기
+    </p>
+
+  </a>
+
+
+
+
+
+  {/* TEL */}
+
+  <a
+    href="tel:01073257033"
+    className="group rounded-3xl bg-[#14213D] px-8 py-6 text-lg font-bold text-white transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl"
+  >
+
+    <div className="text-3xl">
+      📞
+    </div>
+
+    <div className="mt-4">
+      전화 상담
+    </div>
+
+    <p className="mt-2 text-sm font-medium">
+      010-7325-7033
+    </p>
+
+  </a>
+
+
+</div>
 
     <div className="mt-20 rounded-[32px] border border-white/10 bg-white/5 p-10 backdrop-blur">
 
