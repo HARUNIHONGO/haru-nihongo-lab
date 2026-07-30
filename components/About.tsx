@@ -32,7 +32,7 @@ export default function About() {
         {/* 오른쪽 */}
         <div className="w-full md:w-[40%]">
           <img
-            src="/About.jpg"
+            src="/about.jpg"
             alt="HARU NIHONGO LAB"
             className="mx-auto w-full max-w-md rounded-3xl object-cover shadow-2xl"
           />
