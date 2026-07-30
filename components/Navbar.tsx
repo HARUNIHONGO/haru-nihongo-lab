@@ -1,70 +1,169 @@
 "use client";
 
-import { useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
-import { Menu, X } from "lucide-react";
-
-const menu = [
-  { name: "About", href: "#about" },
-  { name: "STEP", href: "#step" },
-  { name: "Level Test", href: "#level-test" },
-  { name: "Contact", href: "#contact" },
-];
+import { useState } from "react";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="fixed inset-x-0 top-0 z-50">
-      <div className="mx-auto mt-5 flex w-[92%] max-w-7xl items-center justify-between rounded-full border border-white/20 bg-white/10 px-5 py-4 backdrop-blur-xl md:px-8">
-        {/* 로고 */}
+    <header className="fixed top-0 left-0 z-50 w-full border-b border-white/10 bg-[#0F172A]/80 backdrop-blur-md">
+
+      <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
+
+
+        {/* LOGO */}
+
         <Link
           href="/"
-          className="text-sm font-semibold tracking-[0.25em] text-white transition hover:opacity-80 md:text-lg"
+          className="flex items-center gap-3"
         >
-          HARU NIHONGO LAB
+
+          <Image
+            src="/logo/haru-symbol.png"
+            alt="HARU NIHONGO LAB"
+            width={45}
+            height={45}
+            priority
+          />
+
+
+          <div className="leading-tight">
+
+            <p className="font-serif text-lg font-bold tracking-[0.25em] text-white">
+              HARU
+            </p>
+
+
+            <p className="text-[10px] tracking-[0.35em] text-white/70">
+              NIHONGO LAB
+            </p>
+
+          </div>
+
+
         </Link>
 
-        {/* PC 메뉴 */}
-        <nav className="hidden gap-10 md:flex">
-          {menu.map((item) => (
-            <a
-              key={item.name}
-              href={item.href}
-              className="text-sm text-white/90 transition duration-300 hover:scale-105 hover:text-white"
-            >
-              {item.name}
-            </a>
-          ))}
+
+
+        {/* PC MENU */}
+
+        <nav className="hidden items-center gap-8 md:flex">
+
+
+          <Link
+            href="/#about"
+            className="text-sm text-white/80 transition hover:text-white"
+          >
+            소개
+          </Link>
+
+
+          <Link
+            href="/#curriculum"
+            className="text-sm text-white/80 transition hover:text-white"
+          >
+            수업
+          </Link>
+
+
+          <Link
+            href="/contact"
+            className="text-sm text-white/80 transition hover:text-white"
+          >
+            튜터
+          </Link>
+
+
+          <Link
+            href="/contact"
+            className="rounded-full bg-white px-6 py-2 text-sm font-semibold text-[#14213D] transition hover:scale-105"
+          >
+            수업 문의하기
+          </Link>
+
+
         </nav>
 
-        {/* 모바일 햄버거 */}
+
+
+        {/* MOBILE BUTTON */}
+
         <button
           onClick={() => setOpen(!open)}
-          className="md:hidden text-[#1E2433] transition hover:text-[#4B6584]"
-          aria-label="메뉴 열기"
+          className="md:hidden text-white"
         >
-          {open ? <X size={28} /> : <Menu size={28} />}
+
+          <div className="space-y-1">
+
+            <span className="block h-0.5 w-6 bg-white"></span>
+            <span className="block h-0.5 w-6 bg-white"></span>
+            <span className="block h-0.5 w-6 bg-white"></span>
+
+          </div>
+
         </button>
+
+
       </div>
 
-      {/* 모바일 메뉴 */}
+
+
+      {/* MOBILE MENU */}
+
       {open && (
-        <div className="mx-auto mt-3 w-[92%] rounded-3xl border border-white/30 bg-white/95 p-6 shadow-xl backdrop-blur-xl md:hidden">
-          <nav className="flex flex-col gap-5">
-            {menu.map((item) => (
-              <a
-                key={item.name}
-                href={item.href}
-                onClick={() => setOpen(false)}
-                className="text-lg font-medium text-[#1E2433] transition hover:text-[#4B6584]"
-              >
-                {item.name}
-              </a>
-            ))}
-          </nav>
+
+        <div className="border-t border-white/10 bg-[#0F172A] px-6 py-6 md:hidden">
+
+
+          <div className="flex flex-col gap-5">
+
+
+            <Link
+              href="/#about"
+              onClick={() => setOpen(false)}
+              className="text-white"
+            >
+              소개
+            </Link>
+
+
+            <Link
+              href="/#curriculum"
+              onClick={() => setOpen(false)}
+              className="text-white"
+            >
+              수업
+            </Link>
+
+
+            <Link
+              href="/contact"
+              onClick={() => setOpen(false)}
+              className="text-white"
+            >
+              튜터
+            </Link>
+
+
+            <Link
+              href="/contact"
+              onClick={() => setOpen(false)}
+              className="rounded-full bg-white px-6 py-3 text-center font-semibold text-[#14213D]"
+            >
+              수업 문의하기
+            </Link>
+
+
+          </div>
+
+
         </div>
+
       )}
+
+
     </header>
   );
 }
